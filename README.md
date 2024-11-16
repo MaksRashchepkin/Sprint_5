@@ -1,3 +1,5 @@
+UI tests for Stellar Burgers
+
 Корневая папка
 data.py
 class Data - Валидные данные пользователя
