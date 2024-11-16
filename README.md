@@ -1,6 +1,7 @@
 **UI tests for Stellar Burgers**
 
 _Корневая папка_
+
 **data.py**
 * class Data - Валидные данные пользователя
 * class Url - Список url страниц
@@ -13,6 +14,7 @@ _Корневая папка_
 * class Locators - Локаторы для тестирования
 
 _Папка tests_
+
 **test_registration.py**
 * test_registration_success - Успешная регистрация
 * test_registration_without_name - Регистрация без имени
