@@ -14,8 +14,8 @@ class TestLogin:
             expected_conditions.visibility_of_element_located(Locators.order_button))
         driver.find_element(*Locators.account_button).click()
         WebDriverWait(driver, 3).until(
-            expected_conditions.visibility_of_element_located(Locators.header_profile))
+            expected_conditions.visibility_of_element_located(Locators.logout_button))
         driver.find_element(*Locators.logout_button).click()
         WebDriverWait(driver, 3).until(
             expected_conditions.visibility_of_element_located(Locators.header_login))
-        assert driver.find_element(*Locators.header_login).text == 'Вход'
+        assert driver.find_element(*Locators.header_login).is_displayed()

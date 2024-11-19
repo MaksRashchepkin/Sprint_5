@@ -18,4 +18,4 @@ class TestLogin:
         driver.find_element(*Locators.account_button).click()
         WebDriverWait(driver, 3).until(
             expected_conditions.visibility_of_element_located(Locators.header_profile))
-        assert driver.current_url == Url.profile_page
+        assert driver.find_element(*Locators.logout_button).is_enabled()

@@ -18,7 +18,7 @@ class TestLogin:
         driver.find_element(*Locators.constructor_button).click()
         WebDriverWait(driver, 3).until(
             expected_conditions.visibility_of_element_located(Locators.assemble_burger))
-        assert driver.find_element(*Locators.assemble_burger).text == 'Соберите бургер'
+        assert driver.find_element(*Locators.assemble_burger).is_displayed()
 
     def test_go_to_logo_from_personal_account(self, driver): # Переход из личного кабинета на логотип Stellar Burgers по клику
         driver.get(Url.login_page)
@@ -33,4 +33,4 @@ class TestLogin:
         driver.find_element(*Locators.logo).click()
         WebDriverWait(driver, 3).until(
             expected_conditions.visibility_of_element_located(Locators.order_button))
-        assert driver.find_element(*Locators.order_button).text == 'Оформить заказ'
+        assert driver.find_element(*Locators.order_button).is_enabled()

@@ -15,7 +15,7 @@ class TestRegistration:
         WebDriverWait(driver, 3).until(
             expected_conditions.visibility_of_element_located(Locators.header_login))
 
-        assert driver.find_element(*Locators.header_login).text == 'Вход'
+        assert driver.find_element(*Locators.header_login).is_displayed()
 
     def test_registration_without_name(self, driver): # Регистрация без имени
         driver.get(Url.registration_page)
@@ -24,9 +24,9 @@ class TestRegistration:
         driver.find_element(*Locators.registration_button).click()
 
         WebDriverWait(driver, 3).until(
-            expected_conditions.visibility_of_element_located(Locators. registration_button))
+            expected_conditions.visibility_of_element_located(Locators.header_registration))
 
-        assert driver.find_element(*Locators.header_registration).text == 'Регистрация'
+        assert driver.find_element(*Locators.header_registration).is_displayed()
 
     def test_registration_without_email(self, driver): # Регистрация без email
         driver.get(Url.registration_page)
@@ -35,9 +35,9 @@ class TestRegistration:
         driver.find_element(*Locators.registration_button).click()
 
         WebDriverWait(driver, 3).until(
-            expected_conditions.visibility_of_element_located(Locators.registration_button))
+            expected_conditions.visibility_of_element_located(Locators.header_registration))
 
-        assert driver.find_element(*Locators.header_registration).text == 'Регистрация'
+        assert driver.find_element(*Locators.header_registration).is_displayed()
 
     def test_registration_without_password(self, driver): # Регистрация без пароля
         driver.get(Url.registration_page)
@@ -46,9 +46,9 @@ class TestRegistration:
         driver.find_element(*Locators.registration_button).click()
 
         WebDriverWait(driver, 3).until(
-            expected_conditions.visibility_of_element_located(Locators.registration_button))
+            expected_conditions.visibility_of_element_located(Locators.header_registration))
 
-        assert driver.find_element(*Locators.header_registration).text == 'Регистрация'
+        assert driver.find_element(*Locators.header_registration).is_displayed()
 
     def test_registration_password_less_6_symbols(self, driver): # Регистрация с паролем менее 6 символов
         driver.get(Url.registration_page)

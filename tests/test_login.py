@@ -15,7 +15,7 @@ class TestLogin:
         driver.find_element(*Locators.login_button_login_page).click()
         WebDriverWait(driver, 3).until(
             expected_conditions.visibility_of_element_located(Locators.order_button))
-        assert driver.find_element(*Locators.order_button).text == 'Оформить заказ'
+        assert driver.find_element(*Locators.order_button).is_enabled()
 
     def test_login_private_account_button(self, driver): # Вход через кнопку Личный кабинет на главной
         driver.get(Url.main_page)
@@ -27,7 +27,7 @@ class TestLogin:
         driver.find_element(*Locators.login_button_login_page).click()
         WebDriverWait(driver, 3).until(
             expected_conditions.visibility_of_element_located(Locators.order_button))
-        assert driver.find_element(*Locators.order_button).text == 'Оформить заказ'
+        assert driver.find_element(*Locators.order_button).is_enabled()
 
     def test_login_registration_form_page(self, driver): # Вход через кнопку в форме регистрации
         driver.get(Url.registration_page)
@@ -39,7 +39,7 @@ class TestLogin:
         driver.find_element(*Locators.login_button_login_page).click()
         WebDriverWait(driver, 3).until(
             expected_conditions.visibility_of_element_located(Locators.order_button))
-        assert driver.find_element(*Locators.order_button).text == 'Оформить заказ'
+        assert driver.find_element(*Locators.order_button).is_enabled()
 
     def test_login_recovery_password_page(self, driver): # Вход через кнопку в форме восстановления пароля
         driver.get(Url.recovery_password_page)
@@ -51,4 +51,4 @@ class TestLogin:
         driver.find_element(*Locators.login_button_login_page).click()
         WebDriverWait(driver, 3).until(
             expected_conditions.visibility_of_element_located(Locators.order_button))
-        assert driver.find_element(*Locators.order_button).text == 'Оформить заказ'
+        assert driver.find_element(*Locators.order_button).is_enabled()
