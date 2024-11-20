@@ -9,6 +9,7 @@ _Корневая папка_
 
 **conftest.py**
 * driver - Настройки webdriver
+* login - Логин пользователя
 
 **locators.py**
 * class Locators - Локаторы для тестирования

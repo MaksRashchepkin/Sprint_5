@@ -1,8 +1,10 @@
+from time import sleep
+
 import pytest
 from selenium import webdriver
-import time
-from locators import Locators
 from data import Data, Url
+from locators import Locators
+import time
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 
@@ -10,7 +12,7 @@ from selenium.webdriver.support import expected_conditions
 def driver():
     driver = webdriver.Chrome()
     driver.maximize_window()
-    time.sleep(3)
+    time.sleep(1)
     yield driver
     driver.quit()
 
