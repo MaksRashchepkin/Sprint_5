@@ -51,7 +51,7 @@ class TestRegistration:
         driver.find_element(*Locators.registration_button).click()
         WebDriverWait(driver, 3).until(
             expected_conditions.visibility_of_element_located(Locators.header_incorrect_password))
-        assert driver.find_element(*Locators.header_incorrect_password).text == 'Некорректный пароль'
+        assert driver.find_element(*Locators.header_incorrect_password).is_displayed()
 
     def test_registration_with_incorrect_email(self, driver): # Регистрация с некорректным email
         driver.get(Url.registration_page)
@@ -61,7 +61,7 @@ class TestRegistration:
         driver.find_element(*Locators.registration_button).click()
         WebDriverWait(driver, 3).until(
             expected_conditions.visibility_of_element_located(Locators.header_exist_user))
-        assert driver.find_element(*Locators.header_exist_user).text == 'Такой пользователь уже существует'
+        assert driver.find_element(*Locators.header_exist_user).is_displayed()
 
     def test_registration_exist_user(self, driver): # Регистрация уже зарегистрированного пользователя
         driver.get(Url.registration_page)
@@ -71,4 +71,4 @@ class TestRegistration:
         driver.find_element(*Locators.registration_button).click()
         WebDriverWait(driver, 3).until(
             expected_conditions.visibility_of_element_located(Locators.header_exist_user))
-        assert driver.find_element(*Locators.header_exist_user).text == 'Такой пользователь уже существует'
+        assert driver.find_element(*Locators.header_exist_user).is_displayed()

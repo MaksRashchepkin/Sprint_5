@@ -19,10 +19,15 @@ class Locators:
     buns_span = By.XPATH, ".//span[text()='Булки']" # Раздел булки
     sauces_span = By.XPATH, ".//span[text()='Соусы']"  # Раздел соусы
     fillings_span = By.XPATH, ".//span[text()='Начинки']"  # Раздел начинки
-    header_incorrect_password = By.XPATH, './/p[text() = "Некорректный пароль"]'  # Сообщение об ошибке Некорректный пароль
-    header_exist_user = By.XPATH, './/p[text() = "Такой пользователь уже существует"]'  # Сообщение об ошибке Такой пользователь уже существует
-    order_button = By.XPATH, './/button[text() = "Оформить заказ"]'  # Кнопка Оформить заказ
-    header_profile = By.XPATH, './/a[text() = "Профиль"]'  # Заголовок Профиль в личном кабинете
-    logout_button = By.XPATH, './/button[text() = "Выход"]'  # Кнопка Выход в личном кабинете
+    header_incorrect_password = By.XPATH, ".//p[text() = 'Некорректный пароль']"  # Сообщение об ошибке Некорректный пароль
+    header_exist_user = By.XPATH, ".//p[text() = 'Такой пользователь уже существует']"  # Сообщение об ошибке Такой пользователь уже существует
+    order_button = By.XPATH, ".//button[text() = 'Оформить заказ']"  # Кнопка Оформить заказ
+    header_profile = By.XPATH, ".//a[text() = 'Профиль']"  # Заголовок Профиль в личном кабинете
+    logout_button = By.XPATH, ".//button[text() = 'Выход']"  # Кнопка Выход в личном кабинете
     login_button_recovery_page = By.XPATH, ".//a[text()='Войти']"  # Кнопка Войти на странице восстановления пароля
-    active_div_in_constructor = By.XPATH, './/div[contains(@class, "current")]/span'  # Активный раздел в конструкторе
+    active_div_buns_in_constructor = By.XPATH, ".//div[contains(@class, 'current')]/span[text()='Булки']"  # Активный раздел Булки в конструкторе
+    active_div_sauces_in_constructor = By.XPATH, ".//div[contains(@class, 'current')]/span[text()='Соусы']"  # Активный раздел Соусы в конструкторе
+    active_div_fillings_in_constructor = By.XPATH, ".//div[contains(@class, 'current')]/span[text()='Начинки']"  # Активный раздел Начинки в конструкторе
+    fluorescent_buns_r2_d3 = By.XPATH, ".//p[text()='Флюоресцентная булка R2-D3']" # Флюоресцентная булка R2-D3
+    sauce_spicy_x = By.XPATH, ".//p[text()='Соус Spicy-X']"  # Соус Spicy-X
+    meat_of_immortal_shellfish_protostomia = By.XPATH, ".//p[text()='Мясо бессмертных моллюсков Protostomia']"  # Мясо бессмертных моллюсков Protostomia
